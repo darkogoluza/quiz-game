@@ -1,0 +1,43 @@
+.question-container {
+  width: 50%;
+  margin: auto;
+}
+
+.question-title {
+  text-align: center;
+}
+
+.answers-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.answare {
+  padding: 1rem 2rem;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: rgb(145, 100, 190);
+  }
+}
+
+.answare-disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.answare-correct {
+  background-color: green;
+  pointer-events: none;
+}
+
+.answare-wrong {
+  background-color: red;
+  pointer-events: none;
+}

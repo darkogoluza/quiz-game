@@ -1,8 +1,17 @@
+import { setUpAnswersCallbacks } from "./setUpAnswersCallbacks.js";
+
 export function addAnswersButton(answers) {
+  if (answers == null || answers.length === 0 || answers == undefined) return;
+
+  $(".answare").remove();
+
   const html = answers
     .map((answer) => {
-      return `<p>${answer}</p>`;
+      return `<button class="answare">${answer}</button>`;
     })
     .join("");
-  $(".options-container").append(html);
+
+  $(".answers-container").append(html);
+
+  setUpAnswersCallbacks(answers[0]);
 }

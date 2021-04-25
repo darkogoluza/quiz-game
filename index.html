@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>Quiz game</title>
   </head>
   <body>
     <main>
-      <h1 class="question-title"></h1>
-      <div class="options-container"></div>
+      <section class="question-container">
+        <h3 class="question-number">Question 1</h3>
+        <h1 class="question-title"></h1>
+        <div class="answers-container"></div>
+      </section>
+      <section class="question-feedback-container hide-question-feedback">
+        <h2 class="question-feedback">Answer is !</h2>
+        <button class="next-question">Next Question</button>
+      </section>
+    </main>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
