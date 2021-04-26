@@ -1,0 +1,64 @@
+.select-box {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  width: fit-content;
+  align-items: center;
+}
+.options-container {
+  background-color: #607196;
+  width: 125px;
+  position: relative;
+  margin-top: 5px;
+
+  max-height: 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+  color: #e8e9ed;
+  text-align: center;
+}
+
+.options-container.active {
+  max-height: 500px;
+  opacity: 1;
+}
+.option {
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  font-size: 0.75em;
+
+  &:hover {
+    background-color: #babfd1;
+  }
+}
+
+.active-option {
+  background-color: #8289a3;
+  &:hover {
+    background-color: #8289a3;
+  }
+}
+
+.selected-btn {
+  border-radius: 5px;
+  cursor: pointer;
+
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+
+  background-color: #607196;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #889ac2 !important;
+  }
+
+  position: relative;
+}
