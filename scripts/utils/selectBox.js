@@ -27,6 +27,12 @@ export class SelectBox {
     });
 
     this.makeOptionActive(this.getOptionIdByIndex(defaultValue));
+
+    // Close select box on click away
+    document.addEventListener("click", (e) => {
+      if (!this.main.contains(e.target))
+        this.optionsContainer.classList.remove("active");
+    });
   }
 
   deactivateOptions() {

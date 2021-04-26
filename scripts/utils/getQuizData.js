@@ -6,6 +6,9 @@ export async function getQuizData({
   const res = await fetch(
     `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`
   );
+  console.log(
+    `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}`
+  );
   const data = await res.json();
   return await data.results;
 }

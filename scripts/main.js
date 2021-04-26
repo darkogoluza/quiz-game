@@ -5,13 +5,17 @@ import { updateQuestionNumber } from "./utils/updateQuestionNumber.js";
 import { getItem, setItem, changeItem } from "./utils/storageManager.js";
 import { SelectBox } from "./utils/selectBox.js";
 import { updateDifficulty } from "./utils/updateDifficulty.js";
+import { categoryNameToId } from "./utils/categoryNameToId.js";
 
 async function startQuiz({
   difficulty = "easy",
   amount = 10,
   category = 9,
 } = {}) {
-  const data = await getQuizData({ difficulty: difficulty.toLowerCase() });
+  const data = await getQuizData({
+    difficulty: difficulty.toLowerCase(),
+    category: category,
+  });
   updateDifficulty(difficulty);
 
   setItem("score", 0);
@@ -58,11 +62,19 @@ const difficultyBox = new SelectBox("#difficulty", {
   defaultValue: 0,
 });
 
+const categoryBox = new SelectBox("#category", {
+  name: "Category",
+  defaultValue: 0,
+});
+
 $(".start-quiz").click(async function (e) {
   e.preventDefault();
   $(".intro").toggle(400);
   setTimeout(async () => {
-    await startQuiz({ difficulty: difficultyBox.activeOptionId });
+    await startQuiz({
+      difficulty: difficultyBox.activeOptionId,
+      category: categoryNameToId(categoryBox.activeOptionId),
+    });
     $(".quiz").addClass("quiz-show");
   }, 400);
 });
