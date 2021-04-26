@@ -6,6 +6,7 @@ import { getItem, setItem, changeItem } from "./utils/storageManager.js";
 import { SelectBox } from "./utils/selectBox.js";
 import { updateDifficulty } from "./utils/updateDifficulty.js";
 import { categoryNameToId } from "./utils/categoryNameToId.js";
+import { updateScore } from "./utils/updateScore.js";
 
 async function startQuiz({
   difficulty = "easy",
@@ -20,6 +21,8 @@ async function startQuiz({
 
   setItem("score", 0);
   setItem("currentQuestion", 0);
+
+  updateScore(getItem("score"));
 
   run(data);
 }
@@ -69,7 +72,7 @@ const categoryBox = new SelectBox("#category", {
 
 $(".start-quiz").click(async function (e) {
   e.preventDefault();
-  $(".intro").toggle(400);
+  $(".intro").addClass("hide-intro");
   setTimeout(async () => {
     await startQuiz({
       difficulty: difficultyBox.activeOptionId,

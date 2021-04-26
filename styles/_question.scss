@@ -1,21 +1,32 @@
 .question-container {
-  width: 50%;
+  width: 75%;
   margin: auto;
+  flex-direction: column;
 }
 
 .question-title {
   text-align: center;
+  color: #f05945;
+  flex-grow: 1;
+  font-size: 2em;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .answers-container {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .answare {
   padding: 1rem 2rem;
-  background-color: rebeccapurple;
+  background-color: rgb(163, 163, 163);
+  color: #f7f3e9;
+  border: none;
+  outline: none;
+  margin: 0 0.5rem;
+
   border-radius: 5px;
   cursor: pointer;
 
@@ -33,11 +44,19 @@
 }
 
 .answare-correct {
-  background-color: green;
+  background-color: #5eaaa8;
   pointer-events: none;
 }
 
 .answare-wrong {
-  background-color: red;
+  background-color: #f05945;
   pointer-events: none;
+}
+
+.quiz-info-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rebeccapurple;
 }

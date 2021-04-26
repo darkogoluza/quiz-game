@@ -16,32 +16,35 @@
     <main>
       <div class="intro">
         <h1 class="intro-title">Hello are you ready to take a quiz?</h1>
-        <div class="select-box" id="difficulty">
-          <div class="options-container">
-            <div class="option">Easy</div>
-            <div class="option">Medium</div>
-            <div class="option">Hard</div>
+        <div class="select-box-container">
+          <div class="select-box" id="difficulty">
+            <div class="options-container">
+              <div class="option">Easy</div>
+              <div class="option">Medium</div>
+              <div class="option">Hard</div>
+            </div>
+            <div class="selected-btn"></div>
           </div>
-          <div class="selected-btn"></div>
-        </div>
-        <div class="select-box" id="category">
-          <div class="options-container">
-            <div class="option">General knowledge</div>
-            <div class="option">Sports</div>
-            <div class="option">Video game</div>
-            <div class="option">History</div>
-            <div class="option">Music</div>
+          <div class="select-box" id="category">
+            <div class="options-container">
+              <div class="option">General knowledge</div>
+              <div class="option">Sports</div>
+              <div class="option">Video games</div>
+              <div class="option">History</div>
+              <div class="option">Music</div>
+            </div>
+            <div class="selected-btn"></div>
           </div>
-          <div class="selected-btn"></div>
         </div>
-
         <button class="start-quiz">Let's start</button>
       </div>
       <div class="quiz">
         <section class="question-container">
-          <h3 class="question-number">Question 1</h3>
-          <h3 class="quiz-score">Score: 0</h3>
-          <h3 class="quiz-difficulty">difficulty: easy</h3>
+          <div class="quiz-info-container">
+            <h3 class="question-number">Question 1</h3>
+            <h3 class="quiz-score">Score: 0</h3>
+            <h3 class="quiz-difficulty">difficulty: easy</h3>
+          </div>
           <h1 class="question-title"></h1>
           <div class="answers-container"></div>
         </section>

@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column-reverse;
   position: relative;
-  width: fit-content;
+  width: 350px;
   align-items: center;
 }
 .options-container {
-  background-color: #607196;
-  width: 125px;
+  background-color: #5eaaa8;
   position: relative;
+  width: 100%;
   margin-top: 5px;
 
   max-height: 0px;
@@ -17,7 +17,7 @@
   opacity: 0;
   transition: all 0.4s ease;
 
-  color: #e8e9ed;
+  color: #f7f3e9;
   text-align: center;
 }
 
@@ -34,14 +34,14 @@
   font-size: 0.75em;
 
   &:hover {
-    background-color: #babfd1;
+    background-color: #a3d2ca;
   }
 }
 
 .active-option {
-  background-color: #8289a3;
+  background-color: #63e0cb;
   &:hover {
-    background-color: #8289a3;
+    background-color: #63e0cb;
   }
 }
 
@@ -49,15 +49,17 @@
   border-radius: 5px;
   cursor: pointer;
 
-  padding: 0.25rem 0.5rem;
+  padding: 0.35rem 0.5rem;
+  width: 100%;
   text-align: center;
 
-  background-color: #607196;
+  background-color: #5eaaa8;
+  color: #f7f3e9;
 
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: #889ac2 !important;
+    background-color: #a3d2ca !important;
   }
 
   position: relative;
