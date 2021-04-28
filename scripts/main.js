@@ -97,7 +97,7 @@ $(".start-quiz").click(async function (e) {
     await startQuiz({
       difficulty: difficultyBox.activeOptionId,
       category: categoryNameToId(categoryBox.activeOptionId),
-      amount: 2,
+      amount: 10,
     });
     $(".quiz").addClass("quiz-show");
     $(".intro").css("display", "none");
