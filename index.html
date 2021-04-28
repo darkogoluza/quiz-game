@@ -14,7 +14,7 @@
   </head>
   <body>
     <main>
-      <div class="intro">
+      <section class="intro">
         <h1 class="intro-title">Hello are you ready to take a quiz?</h1>
         <div class="select-box-container">
           <div class="select-box" id="difficulty">
@@ -37,22 +37,35 @@
           </div>
         </div>
         <button class="start-quiz">Let's start</button>
-      </div>
-      <div class="quiz">
+      </section>
+
+      <section class="quiz">
         <section class="question-container">
           <div class="quiz-info-container">
             <h3 class="question-number">Question 1</h3>
             <h3 class="quiz-score">Score: 0</h3>
             <h3 class="quiz-difficulty">difficulty: easy</h3>
           </div>
-          <h1 class="question-title"></h1>
+          <div class="title-container">
+            <h1 class="question-title"></h1>
+          </div>
           <div class="answers-container"></div>
         </section>
         <section class="question-feedback-container hide-question-feedback">
           <h2 class="question-feedback">Answer is !</h2>
           <button class="next-question">Next Question</button>
         </section>
-      </div>
+      </section>
+
+      <section class="results">
+        <h1 class="results__title">Your results are</h1>
+        <div class="results__content">
+          <h2 class="results__score">Correctly answered 10 out of 10</h2>
+          <h2 class="results__difficulty">Difficulty: Easy</h2>
+          <h2 class="results__time">You finished in 2m and 30s</h2>
+        </div>
+        <button class="play-again">Play Again</button>
+      </section>
     </main>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
